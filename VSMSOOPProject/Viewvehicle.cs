@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VSMSOOPProject
 {
-    public partial class Viewvehicle : Form
+    public partial class ViewVehicle : Form
     {
-        public Viewvehicle()
+        public ViewVehicle()
         {
             InitializeComponent();
         }

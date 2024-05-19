@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace VSMSOOPProject
 {
-    public partial class ViewSalesmen : Form
+    public partial class ViewUsers : Form
     {
-        public ViewSalesmen()
+        public ViewUsers()
         {
             InitializeComponent();
         }

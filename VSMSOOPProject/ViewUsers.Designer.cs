@@ -1,7 +1,7 @@
 ﻿
 namespace VSMSOOPProject
 {
-    partial class ViewSalesmen
+    partial class ViewUsers
     {
         /// <summary>
         /// Required designer variable.

@@ -1,7 +1,7 @@
 ﻿
 namespace VSMSOOPProject
 {
-    partial class Viewvehicle
+    partial class ViewVehicle
     {
         /// <summary>
         /// Required designer variable.

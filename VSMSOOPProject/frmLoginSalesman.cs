@@ -20,47 +20,27 @@ namespace VSMSOOPProject
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-BSVHRGN;Initial Catalog=DB_VSMSOOPProject;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
-            string username, user_password;
+            string username, user_password, tableName = "Salesman";
+            clsDBHandler DB = new clsDBHandler();
 
             username = textBox1.Text;
             user_password = textBox2.Text;
 
-            try
+            if (DB.mtdCheckUser(username, tableName, user_password))
             {
-                string querry = "Select * from Salesmen where Username = '" + username + "'and  Password = '" + user_password + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, con);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-                if (dtable.Rows.Count > 0)
-                {
-                    username = textBox1.Text;
-                    user_password = textBox2.Text;
+                frmInventroy obj = new frmInventroy();
+                obj.Show();
 
-                    frmDashboardSalesman obj = new frmDashboardSalesman();
-                    obj.Show();
-
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Details", "Error", MessageBoxButtons.OK);
-                    textBox1.Clear();
-                    textBox2.Clear();
-
-                    textBox1.Focus();
-                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Invalid Log in Details");
-            }
-            finally
-            {
-                con.Close();
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+            private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
             textBox2.Clear();
@@ -74,6 +54,11 @@ namespace VSMSOOPProject
             obj.Show();
 
             this.Hide();
+        }
+
+        private void frmLoginSalesman_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

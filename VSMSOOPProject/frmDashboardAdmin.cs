@@ -33,14 +33,14 @@ namespace VSMSOOPProject
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        /*private void button6_Click(object sender, EventArgs e)
         {
-            DeleteSupplier obj = new DeleteSupplier();
+            frmDeleteSupplier obj = new DeleteSupplier();
             obj.Show();
 
             this.Hide();
 
-        }
+        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace VSMSOOPProject
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DeleteSalesmen obj = new DeleteSalesmen();
+            frmDeleteSalesmen obj = new frmDeleteSalesmen();
             obj.Show();
 
             this.Hide();
@@ -60,7 +60,7 @@ namespace VSMSOOPProject
 
         private void button8_Click(object sender, EventArgs e)
         {
-            ViewSalesmen obj = new ViewSalesmen();
+            ViewUsers obj = new ViewUsers();
             obj.Show();
 
             this.Hide();
@@ -84,7 +84,7 @@ namespace VSMSOOPProject
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Viewvehicle obj = new Viewvehicle();
+            ViewVehicle obj = new ViewVehicle();
             obj.Show();
 
             this.Hide();

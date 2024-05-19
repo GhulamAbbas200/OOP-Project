@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace VSMSOOPProject
 {
-    public partial class DeleteVehicle : Form
+    public partial class frmAddVehicle : Form
     {
-        public DeleteVehicle()
+        public frmAddVehicle()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-             frmDashboardAdmin obj = new frmDashboardAdmin();
-            obj.Show();
-
-            this.Hide();
         }
     }
 }

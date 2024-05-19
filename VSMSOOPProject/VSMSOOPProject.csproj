@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,7 @@
     <Compile Include="absUser.cs" />
     <Compile Include="clsAdmin.cs" />
     <Compile Include="clsCustomer.cs" />
+    <Compile Include="clsDBConnect.cs" />
     <Compile Include="clsInventory.cs" />
     <Compile Include="clsLogger.cs" />
     <Compile Include="clsOrder.cs" />
@@ -59,41 +61,11 @@
     <Compile Include="clsSalesman.cs" />
     <Compile Include="clsSupplier.cs" />
     <Compile Include="clsVehicleDetailGeneration.cs" />
-    <Compile Include="DeleteSalesmen.cs">
+    <Compile Include="frmAddVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteSalesmen.Designer.cs">
-      <DependentUpon>DeleteSalesmen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteSupplier.Designer.cs">
-      <DependentUpon>DeleteSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DeleteVehicle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteVehicle.Designer.cs">
-      <DependentUpon>DeleteVehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmADUSalesman.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmADUSalesman.Designer.cs">
-      <DependentUpon>frmADUSalesman.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmADUSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmADUSupplier.Designer.cs">
-      <DependentUpon>frmADUSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmADUVehicles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmADUVehicles.Designer.cs">
-      <DependentUpon>frmADUVehicles.cs</DependentUpon>
+    <Compile Include="frmAddVehicle.Designer.cs">
+      <DependentUpon>frmAddVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarDetails.cs">
       <SubType>Form</SubType>
@@ -170,42 +142,18 @@
     <Compile Include="IVehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewSalesmen.cs">
+    <Compile Include="ViewUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewSalesmen.Designer.cs">
-      <DependentUpon>ViewSalesmen.cs</DependentUpon>
+    <Compile Include="ViewUsers.Designer.cs">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewSupplier.cs">
+    <Compile Include="ViewVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewSupplier.Designer.cs">
-      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    <Compile Include="ViewVehicle.Designer.cs">
+      <DependentUpon>ViewVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewvehicle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Viewvehicle.Designer.cs">
-      <DependentUpon>Viewvehicle.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DeleteSalesmen.resx">
-      <DependentUpon>DeleteSalesmen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteSupplier.resx">
-      <DependentUpon>DeleteSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DeleteVehicle.resx">
-      <DependentUpon>DeleteVehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmADUSalesman.resx">
-      <DependentUpon>frmADUSalesman.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmADUSupplier.resx">
-      <DependentUpon>frmADUSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmADUVehicles.resx">
-      <DependentUpon>frmADUVehicles.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboardAdmin.resx">
       <DependentUpon>frmDashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,14 +187,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViewSalesmen.resx">
-      <DependentUpon>ViewSalesmen.cs</DependentUpon>
+    <EmbeddedResource Include="ViewUsers.resx">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewSupplier.resx">
-      <DependentUpon>ViewSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Viewvehicle.resx">
-      <DependentUpon>Viewvehicle.cs</DependentUpon>
+    <EmbeddedResource Include="ViewVehicle.resx">
+      <DependentUpon>ViewVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

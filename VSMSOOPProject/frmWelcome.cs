@@ -66,5 +66,10 @@ namespace VSMSOOPProject
         {
             Application.Exit();
         }
+
+        private void frmWelcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VSMSOOPProject
 {
@@ -23,43 +24,33 @@ namespace VSMSOOPProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username, user_password;
+            clsCustomer objclsCustomer = new clsCustomer();
+            string username, user_password, tableName = "Customers";
+            clsDBHandler DB = new clsDBHandler();
 
             username = textBox1.Text;
-            user_password = textBox3.Text;
+            user_password = textBox2.Text;
 
-            try 
+            if (DB.mtdCheckUser(username, tableName, user_password))
             {
-                string querry = "Select * from Customers where Username = '"+username+"'and  Password = '"+user_password+"'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry,conn);
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-                if (dtable.Rows.Count > 0)
-                {
-                    username = textBox1.Text;
-                    user_password = textBox3.Text;
+                frmInventroy obj = new frmInventroy();
+                obj.Show();
 
-                    frmInventroy obj = new frmInventroy();
-                    obj.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Details","Error", MessageBoxButtons.OK);
-                    textBox1.Clear();
-                    textBox3.Clear();
-
-                    textBox1.Focus();
-                }
-            } 
-            catch 
-            {
-                MessageBox.Show("Invalid Log in Details");
-            } 
-            finally 
-            {
-                conn.Close();
             }
+            else
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox1.Focus();
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+
+            textBox1.Focus();
         }
 
         private void frmLoginUser_Load(object sender, EventArgs e)
@@ -70,7 +61,7 @@ namespace VSMSOOPProject
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-            textBox3.Clear();
+            textBox2.Clear();
 
             textBox1.Focus();
         }

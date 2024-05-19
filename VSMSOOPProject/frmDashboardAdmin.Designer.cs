@@ -112,14 +112,14 @@
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            /*this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(360, 123);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(161, 40);
             this.button6.TabIndex = 4;
             this.button6.Text = "DeleteSupplier";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);*/
             // 
             // button7
             // 
